@@ -50,7 +50,7 @@
 </head>
 <body>
     <header>
-        <h1>Towards Learning-based Control for Robust Real-world Robotic Grasping in Dynamic Environments</h1>
+        <h1>Towards Learning-based Control for Versatile Robotic Grasping in the Real World</h1>
         <p><font size="+2"> <em>Authors:</em> Nicolas Bach, Christian Jestel, Julian Eßer, Oliver Urbann and Peter Detzner </font><br>
         <font size="+1"> Department of AI and Autonomous Systems, Fraunhofer Institute for Material Flow and Logistics (IML) </font></p>
     </header>
@@ -58,26 +58,7 @@
     <main>
         <section>
             <h2>Abstract</h2>
-            <p> Robotic manipulation in dynamic environments
-presents significant challenges, especially compared to the
-adaptability and flexibility of humans. While traditional robotic
-systems excel in controlled settings, their performance falters
-in unpredictable scenarios. Learning-based control has shown
-promise in addressing these challenges by developing adaptable
-behaviors for robotic platforms. However, its application to real-
-world manipulation tasks remains limited. This paper presents
-a two-stage training process to improve the robustness of
-robotic grasping tasks in dynamic environments. In particular,
-we introduce new rewards and observations of net contact
-measurements for more effective teacher training. Moreover, we
-utilize privileged information to inform point cloud sampling,
-enhancing student training and sim-to-real transfer reliability.
-Our framework is validated through ablation studies and real-
-world experiments, demonstrating robust grasping of various
-objects under a variety of changing environmental conditions.
-These advancements contribute to bridging the sim-to-real gap,
-paving the way for generalizable and deployable manipulation
-policies that function independently of specific settings.</p>
+            <p>Robotic manipulation in non-structured environments presents significant challenges, especially compared to the adaptability and flexibility of humans. While traditional robotic systems excel in controlled settings, their performance falters in unpredictable scenarios. Learning-based control has shown promise in addressing these challenges by developing adaptable behaviors for robotic platforms. However, its application to real-world manipulation tasks remains limited. In this paper we present a two-stage training process that generates versatile and robust policies for robotic grasping tasks in the real-world. In particular, we introduce new rewards and observations of net contact measurements for more effective teacher training. Moreover, we utilize privileged information to inform point cloud sampling, enhancing student training and sim-to-real transfer reliability. Our training process is validated through ablation studies and real-world experiments, demonstrating robust grasping of various objects under a variety of changing environmental conditions. These advancements contribute to bridging the sim-to-real gap, paving the way for generalizable and deployable manipulation policies that function independently of specific settings. </p>
         </section>
 	<div class="video-grid">
                 <div class="video-item">
@@ -125,7 +106,7 @@ object-centric point cloud, which we merge with a synthetic point cloud represen
         </section>
 
         <section>
-	    <h2> Experiments </h2>
+	    <h2>Quantitative Experiments</h2>
 	    To evaluate the proposed methods, we perform an ablation study to assess the extension to the baseline in simulation. Further, we evaluate the efficiency of the proposed point cloud sampling method. In real-world experiments, we investigate the trained policies in terms of grasping success and robustness to deviations, such as different scenes, perturbations, and camera positions.	
             <h3>Grasping Experiments</h3>
 
@@ -239,6 +220,11 @@ object-centric point cloud, which we merge with a synthetic point cloud represen
                 </div>
             </div>
 	    <br>
+
+	</section>
+	<section>
+	    <h2> Qualitative Experiments </h2>
+
             <h3>Invariance to Changes in the Scene</h3>
 
 	    In this experiment we perform two grasps of a mug, then change the camera and move the surface, from which we grasp the object.
