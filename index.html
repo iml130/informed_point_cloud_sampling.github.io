@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Towards Learning-based Control for Robust Real-world Robotic Grasping in Dynamic Environments</title>
+    <title>Robust Robotic Grasping via Teacher-Student Learning and
+Informed Point Cloud Sampling</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,16 +51,16 @@
 </head>
 <body>
     <header>
-        <h1>Towards Learning-based Control for Versatile Robotic Grasping in the Real World</h1>
+        <h1>Robust Robotic Grasping via Teacher-Student Learning and Informed Point Cloud Sampling</h1>
         <p><font size="+2"> <em>Authors:</em> Nicolas Bach, Christian Jestel, Julian Eßer, Oliver Urbann and Peter Detzner </font><br>
-        <font size="+1"> Department of AI and Autonomous Systems, Fraunhofer Institute for Material Flow and Logistics (IML) </font></p>
+        <font size="+1"> Fraunhofer Institute for Material Flow and Logistics (IML) </font></p>
     </header>
 
     <main>
         <section>
             <h2>Abstract</h2>
-            <p>Robotic manipulation in non-structured environments presents significant challenges, especially compared to the adaptability and flexibility of humans. While traditional robotic systems excel in controlled settings, their performance falters in unpredictable scenarios. Learning-based control has shown promise in addressing these challenges by developing adaptable behaviors for robotic platforms. However, its application to real-world manipulation tasks remains limited. In this paper we present a two-stage training process that generates versatile and robust policies for robotic grasping tasks in the real-world. In particular, we introduce new rewards and observations of net contact measurements for more effective teacher training. Moreover, we utilize privileged information to inform point cloud sampling, enhancing student training and sim-to-real transfer reliability. Our training process is validated through ablation studies and real-world experiments, demonstrating robust grasping of various objects under a variety of changing environmental conditions. These advancements contribute to bridging the sim-to-real gap, paving the way for generalizable and deployable manipulation policies that function independently of specific settings. </p>
-        </section>
+            <p> Current sim-to-real methods process sensory data uniformly, leading to computational inefficiency and problems with the sim-to-real transfer, as policies tend to overfit to scenes, rather than learn robust features. Drawing inspiration from the human selective gaze mechanism, we present a novel method called informed point cloud sampling to address these issues in reinforcement learning with point clouds. Our method can be applied within a Teacher-Student framework to prioritize task-relevant regions. By incorporating an auxiliary distance estimation head during training, our system can effectively identify object centers through the combination of distance estimates and current end-effector positions. This can be further exploited to generate object-centric observations, removing irrelevant information and increasing robustness to different settings. We apply our proposed method to robotic grasping in the real world. Experimental results demonstrate that our method achieves performance comparable to baseline methods while using significantly reduced point cloud density, improving computational efficiency, and leading to a robust sim-to-real transfer. Our method’s effectiveness is validated through comprehensive simulation and real-world experiments, showing promise for robust robotic grasping. </p>
+	</section>
 	<div class="video-grid">
                 <div class="video-item">
                     <video controls>
